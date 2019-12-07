@@ -887,7 +887,7 @@ $theme_options = array(
 			'desc'  => '请输入您的支付宝图片路径',
 			'id'    => 'git_pay_qr',
 			'type'  => 'text',
-			'std'   => 'https://p.ssl.qhimg.com/t0162cc8398cbf7dea3.jpg'
+			'std'   => ''
 		),
 		array(
 			'name'  => '自定义社交网络名字',

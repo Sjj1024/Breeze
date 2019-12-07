@@ -705,7 +705,7 @@ $theme_options = array(
         'desc'  => '在这里输入您的幻灯片的图片路径',
         'id'    => 'git_slick1img_b',
         'type'  => 'text',
-        'std'   => 'https://p.ssl.qhimg.com/t018a12da24a5687855.jpg'
+        'std'   => 'https://wx3.sinaimg.cn/large/007dZAl0gy1g9ogf5bd2hj30nr08cgo1.jpg'
     ),
     array(
         'name'  => '幻灯片一链接',
@@ -726,7 +726,7 @@ $theme_options = array(
         'desc'  => '在这里输入您的幻灯片的图片路径',
         'id'    => 'git_slick2img_b',
         'type'  => 'text',
-        'std'   => 'https://p.ssl.qhimg.com/t019de3d2e67ceef590.jpg'
+        'std'   => 'https://wx4.sinaimg.cn/large/007dZAl0gy1g9oge3x3w9j30nr08cn09.jpg'
     ),
     array(
         'name'  => '幻灯片二链接',
@@ -747,7 +747,7 @@ $theme_options = array(
         'desc'  => '在这里输入您的幻灯片的图片路径',
         'id'    => 'git_slick3img_b',
         'type'  => 'text',
-        'std'   => 'https://p.ssl.qhimg.com/t01511a88bc738bebe9.jpg'
+        'std'   => 'https://wx1.sinaimg.cn/large/007dZAl0gy1g9ogeck42jj30nr08c77f.jpg'
     ),
     array(
         'name'  => '幻灯片三链接',
@@ -768,7 +768,7 @@ $theme_options = array(
         'desc'  => '在这里输入您的幻灯片的图片路径',
         'id'    => 'git_slick4img_b',
         'type'  => 'text',
-        'std'   => 'https://p.ssl.qhimg.com/t01e814d7303096185c.jpg'
+        'std'   => 'https://wx1.sinaimg.cn/large/007dZAl0gy1g9ogegdnxdj30nr08cdj8.jpg'
     ),
     array(
         'name'  => '幻灯片四链接',
@@ -789,7 +789,7 @@ $theme_options = array(
         'desc'  => '在这里输入您的幻灯片的图片路径',
         'id'    => 'git_slick5img_b',
         'type'  => 'text',
-        'std'   => 'https://p.ssl.qhimg.com/t0173790ccd103bf12b.jpg'
+        'std'   => 'https://wx2.sinaimg.cn/large/007dZAl0gy1g9oge7v04vj30nr08caeg.jpg'
     ),
     array(
         'name'  => '幻灯片五链接',
@@ -810,7 +810,7 @@ $theme_options = array(
         'desc'  => '在这里输入您的幻灯片的图片路径',
         'id'    => 'git_slick6img_b',
         'type'  => 'text',
-        'std'   => 'https://p.ssl.qhimg.com/t018514935a00cbeeb7.jpg'
+        'std'   => 'https://wx4.sinaimg.cn/large/007dZAl0gy1g9ogek33fqj30nr08cgq8.jpg'
     ),
     array(
         'name'  => '幻灯片六链接',

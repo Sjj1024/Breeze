@@ -448,7 +448,7 @@ $theme_options = array(
 			'desc'  => '此处输入的文字将出现在每篇文章最底部，你可以使用：{{title}}表示文章标题，{{link}}表示文章链接',
 			'id'    => 'git_copyright_b',
 			'type'  => 'textarea',
-			'std'   => '极客公园 , 版权所有丨如未注明 , 均为原创丨本网站采用<a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" rel="nofollow" target="_blank" title="BY-NC-SA授权协议">BY-NC-SA</a>协议进行授权 <br >转载请注明原文链接：<a href="{{link}}" target="_blank" title="{{title}}">{{title}}</a>'
+			'std'   => '1024小神 , 版权所有丨如未注明 , 均为原创丨本网站采用<a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" rel="nofollow" target="_blank" title="BY-NC-SA授权协议">BY-NC-SA</a>协议进行授权 <br >转载请注明原文链接：<a href="{{link}}" target="_blank" title="{{title}}">{{title}}</a>'
 		)
 	),
 
@@ -983,7 +983,7 @@ $theme_options = array(
 			'desc'  => '在全站页面footer部分出现，可放置网站的版权信息等等',
 			'id'    => 'git_footcode',
 			'type'  => 'textarea',
-			'std'   => 'Copyright © 2014-2015 <a href="/" title="极客公园">极客公园</a> | <a rel="nofollow" target="_blank" href="/about.html">关于网站</a> | <a rel="nofollow" target="_blank" href="/tags.html">标签汇总</a> | <a rel="nofollow" target="_blank" href="/archive.html">文章归档</a> | <a rel="nofollow" target="_blank" href="/links.html">友情链接</a> | <a href="/sitemap.html" target="_blank" title="站点地图（HTML版）">网站地图</a> | 由 <a rel="nofollow" target="_blank" href="https://gitcafe.net/goto/ad">云左</a> &amp; <a rel="nofollow" target="_blank" href="https://gitcafe.net/go/qiniu">七牛</a> &amp; <a href="/wp-admin">强力驱动</a>'
+			'std'   => 'Copyright © 2014-2015 <a href="/" title="1024小神">1024小神</a> | <a rel="nofollow" target="_blank" href="/about.html">关于网站</a> | <a rel="nofollow" target="_blank" href="/tags.html">标签汇总</a> | <a rel="nofollow" target="_blank" href="/archive.html">文章归档</a> | <a rel="nofollow" target="_blank" href="/links.html">友情链接</a> | <a href="/sitemap.html" target="_blank" title="站点地图（HTML版）">网站地图</a> | 由 <a rel="nofollow" target="_blank" href="https://gitcafe.net/goto/ad">云左</a> &amp; <a rel="nofollow" target="_blank" href="https://gitcafe.net/go/qiniu">七牛</a> &amp; <a href="/wp-admin">强力驱动</a>'
 		),
 		array(
 			'name'  => '全站底部脚本代码',
@@ -1458,7 +1458,7 @@ $theme_options = array(
 			'desc'  => '在本输入框内输入您的微信公众号描述信息，支持html代码，字数合适就行，不能太多',
 			'id'    => 'git_mp_tips',
 			'type'  => 'textarea',
-			'std'   => '请关注极客公园官方微信公众号，关注并订阅<span style="color:#E96463;font-weight:bold;">云落极客公园</span>获取验证码。在微信里搜索<span style="color:#E96463;font-weight:bold;">云落极客公园</span>或者微信扫描二维码都可以关注极客公园官方微信公众号。'
+			'std'   => '请关注1024小神官方微信公众号，关注并订阅<span style="color:#E96463;font-weight:bold;">云落1024小神</span>获取验证码。在微信里搜索<span style="color:#E96463;font-weight:bold;">云落1024小神</span>或者微信扫描二维码都可以关注1024小神官方微信公众号。'
 		),
 		array(
 			'title' => 'HTML5 桌面推送',
@@ -1494,7 +1494,7 @@ $theme_options = array(
 		),
 		array(
 			'name'  => 'HTML5推送链接【可选】',
-			'desc'  => '当用户点击弹窗的时候说点击的链接，默认为极客公园',
+			'desc'  => '当用户点击弹窗的时候说点击的链接，默认为1024小神',
 			'id'    => 'git_notification_link',
 			'type'  => 'text',
 			'std'   => 'https://gitcafe.net'
@@ -1504,7 +1504,7 @@ $theme_options = array(
 			'desc'  => '在这里输入推送主体内容，字数合适就行，不能太多【必选】',
 			'id'    => 'git_notification_body',
 			'type'  => 'textarea',
-			'std'   => '极客公园，一个分享有趣的安卓APP和实用的WordPress技术以及Windows使用技巧的网站'
+			'std'   => '1024小神，一个分享有趣的安卓APP和实用的WordPress技术以及Windows使用技巧的网站'
 		),
 		array(
 			'title' => 'SMTP邮箱设置',

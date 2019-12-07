@@ -845,7 +845,7 @@ $theme_options = array(
 			'desc'  => '填写新浪微博个人主页链接',
 			'id'    => 'git_weibo',
 			'type'  => 'text',
-			'std'   => 'https://gitcafe.net/go/weibo'
+			'std'   => 'https://1024shen.com/go/weibo'
 		),
 		array(
 			'name'  => '腾讯微信',
@@ -944,7 +944,7 @@ $theme_options = array(
 			'desc'  => '在这里输入第二个footer的内容',
 			'id'    => 'git_footconent2',
 			'type'  => 'textarea',
-			'std'   => '<ul><li><a href="https://gitcafe.net/goto/ad" title="云左" target="_blank">云左主机</a></li><li><a href="https://gitcafe.net/go/qiniu" title="七牛云" target="_blank">七牛云</a></li></ul>'
+			'std'   => '<ul><li><a href="https://1024shen.com/goto/ad" title="云左" target="_blank">云左主机</a></li><li><a href="https://1024shen.com/go/qiniu" title="七牛云" target="_blank">七牛云</a></li></ul>'
 		),
 		array(
 			'name'  => 'Footer3标题',
@@ -958,11 +958,11 @@ $theme_options = array(
 			'desc'  => '在这里输入第三个footer的内容',
 			'id'    => 'git_footconent3',
 			'type'  => 'textarea',
-			'std'   => '<ul><li><a href="https://gitcafe.net/go/weibo" title="云落的新浪微博" target="_blank">云落的新浪微博</a></li>
+			'std'   => '<ul><li><a href="https://1024shen.com/go/weibo" title="云落的新浪微博" target="_blank">云落的新浪微博</a></li>
 	<li><a href="http://t.qq.com/sp865113728" title="云落的腾讯微博" target="_blank">云落的腾讯微博</a></li>
 	<li><a href="http://git.oschina.net/yunluo/" title="云落的代码" target="_blank">云落的代码</a></li>
-	<li><a href="https://gitcafe.net/go/baidu" title="云落的贴吧" target="_blank">云落的贴吧</a></li>
-	<li><a href="https://gitcafe.net/" title="云落的网站" target="_blank">云落的网站</a></li></ul>'
+	<li><a href="https://1024shen.com/go/baidu" title="云落的贴吧" target="_blank">云落的贴吧</a></li>
+	<li><a href="https://1024shen.com/" title="云落的网站" target="_blank">云落的网站</a></li></ul>'
 		),
 		array(
 			'name'  => 'Footer4标题',
@@ -983,7 +983,7 @@ $theme_options = array(
 			'desc'  => '在全站页面footer部分出现，可放置网站的版权信息等等',
 			'id'    => 'git_footcode',
 			'type'  => 'textarea',
-			'std'   => 'Copyright © 2014-2015 <a href="/" title="1024小神">1024小神</a> | <a rel="nofollow" target="_blank" href="/about.html">关于网站</a> | <a rel="nofollow" target="_blank" href="/tags.html">标签汇总</a> | <a rel="nofollow" target="_blank" href="/archive.html">文章归档</a> | <a rel="nofollow" target="_blank" href="/links.html">友情链接</a> | <a href="/sitemap.html" target="_blank" title="站点地图（HTML版）">网站地图</a> | 由 <a rel="nofollow" target="_blank" href="https://gitcafe.net/goto/ad">云左</a> &amp; <a rel="nofollow" target="_blank" href="https://gitcafe.net/go/qiniu">七牛</a> &amp; <a href="/wp-admin">强力驱动</a>'
+			'std'   => 'Copyright © 2014-2015 <a href="/" title="1024小神">1024小神</a> | <a rel="nofollow" target="_blank" href="/about.html">关于网站</a> | <a rel="nofollow" target="_blank" href="/tags.html">标签汇总</a> | <a rel="nofollow" target="_blank" href="/archive.html">文章归档</a> | <a rel="nofollow" target="_blank" href="/links.html">友情链接</a> | <a href="/sitemap.html" target="_blank" title="站点地图（HTML版）">网站地图</a> | 由 <a rel="nofollow" target="_blank" href="https://1024shen.com/goto/ad">云左</a> &amp; <a rel="nofollow" target="_blank" href="https://1024shen.com/go/qiniu">七牛</a> &amp; <a href="/wp-admin">强力驱动</a>'
 		),
 		array(
 			'name'  => '全站底部脚本代码',
@@ -1369,7 +1369,7 @@ $theme_options = array(
 		),
 		array(
 			'name'  => 'CDN加速域名',
-			'desc'  => '输入本项目之前，必须开启本功能，输入您的七牛云自定义域名，必须带 <font color="#cc0000"><strong>http://</strong></font>  结尾不能带/  <a class="button-primary" target="_blank" href="https://gitcafe.net/go/qiniu" title="立刻注册七牛，免费使用免备案高速CDN">注册七牛</a>，并获取链接<a rel="nofollow" href="http://71bbs.people.com.cn/postImages/89/CF/7B/F5/1509845597173.jpg" target="_blank">如图</a>',
+			'desc'  => '输入本项目之前，必须开启本功能，输入您的七牛云自定义域名，必须带 <font color="#cc0000"><strong>http://</strong></font>  结尾不能带/  <a class="button-primary" target="_blank" href="https://1024shen.com/go/qiniu" title="立刻注册七牛，免费使用免备案高速CDN">注册七牛</a>，并获取链接<a rel="nofollow" href="http://71bbs.people.com.cn/postImages/89/CF/7B/F5/1509845597173.jpg" target="_blank">如图</a>',
 			'id'    => 'git_cdnurl_b',
 			'type'  => 'text',
 			'std'   => ''
@@ -1497,7 +1497,7 @@ $theme_options = array(
 			'desc'  => '当用户点击弹窗的时候说点击的链接，默认为1024小神',
 			'id'    => 'git_notification_link',
 			'type'  => 'text',
-			'std'   => 'https://gitcafe.net'
+			'std'   => 'https://1024shen.com'
 		),
 		array(
 			'name'  => 'HTML5推送内容',

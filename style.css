@@ -8897,10 +8897,6 @@ a.badge-inverse:hover .label-arrow,a.label-inverse:hover .label-arrow {
 	right: 0
 }
 
-.slick-next:hover,.slick-prev:hover {
-	background-color: #03a9f4
-}
-
 .slick-next:before,.slick-prev:before {
 	font: 3.75rem/5rem SimSun
 }

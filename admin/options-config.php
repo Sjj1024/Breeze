@@ -866,7 +866,7 @@ $theme_options = array(
 			'desc'  => '直接输入QQ号即可',
 			'id'    => 'git_qqContact',
 			'type'  => 'text',
-			'std'   => '865113728'
+			'std'   => '2950525265'
 		),
 		array(
 			'name'  => 'Email',
@@ -880,7 +880,7 @@ $theme_options = array(
 			'desc'  => '',
 			'id'    => 'git_pay',
 			'type'  => 'text',
-			'std'   => 'sp91@qq.com'
+			'std'   => '2950525265@qq.com'
 		),
 		array(
 			'name'  => '支付宝二维码',

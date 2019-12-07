@@ -21,7 +21,7 @@ $theme_options = array(
 			'desc'  => '最新消息显示在全站导航条下方，非常给力的推广位置',
 			'id'    => 'git_tui',
 			'type'  => 'textarea',
-			'std'   => '<li>欢迎访问极客公园网站，WordPress信息，WordPress教程，推荐使用最新版火狐浏览器和Chrome浏览器访问本网站，欢迎加入极客公园<code><a target="_blank" href="https://gitcafe.net/go/qun"><i class="fa fa-qq"></i> QQ群</a></code></li><li>Git主题现已支持滚动公告栏功能，兼容其他浏览器，看到的就是咯，在后台最新消息那里用li标签添加即可。</li><li>最新版Git主题已支持说说碎语功能，可像添加文章一样直接添加说说，新建说说页面即可，最后重新保存固定连接，<a target="_blank" href="https://gitcafe.net/shuo.html">演示地址</a></li><li>百度口碑求点赞啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊<a target="_blank" href="http://koubei.baidu.com/s/gitcafe.net">http://koubei.baidu.com/s/gitcafe.net</a></li><li>如果您觉得本站非常有看点，那么赶紧使用Ctrl+D 收藏极客公园吧</li>'
+			'std'   => '<li>欢迎访问本网站，WordPress信息，WordPress教程，欢迎加入1024小神</li><li>主题现已支持滚动公告栏功能，兼容其他浏览器，看到的就是咯，在后台最新消息那里用li标签添加即可。</li><li>主题已支持说说碎语功能，可像添加文章一样直接添加说说</li><li>百度口碑求点赞啊啊啊啊啊啊啊</li><li>如果您觉得本站非常有看点，那么赶紧使用Ctrl+D 收藏1024小神吧</li>'
 		),
 		array(
 			'name'  => '友情链接页面',

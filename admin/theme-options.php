@@ -42,7 +42,7 @@ function git_theme_options_page() {
 ?>
 
 <div class="wrap">
-	<h2>Git 主题选项 <a href="https://support.qq.com/products/51158" class="feedback add-new-h2" target="_blank">问题反馈</a></h2>
+	<h2>Breeze 主题选项</h2>
 	<div class="wp-filter">
 	<p>您的网站分类列表：<?php echo Bing_category(); ?></p>
 	</div>

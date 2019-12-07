@@ -21,7 +21,7 @@ $theme_options = array(
 			'desc'  => '最新消息显示在全站导航条下方，非常给力的推广位置',
 			'id'    => 'git_tui',
 			'type'  => 'textarea',
-			'std'   => '<li>欢迎访问本网站，WordPress信息，WordPress教程，欢迎加入1024小神</li><li>主题现已支持滚动公告栏功能，兼容其他浏览器，看到的就是咯，在后台最新消息那里用li标签添加即可。</li><li>主题已支持说说碎语功能，可像添加文章一样直接添加说说</li><li>百度口碑求点赞啊啊啊啊啊啊啊</li><li>如果您觉得本站非常有看点，那么赶紧使用Ctrl+D 收藏1024小神吧</li>'
+			'std'   => '<li>欢迎访问极客公园网站，WordPress信息，WordPress教程，推荐使用最新版火狐浏览器和Chrome浏览器访问本网站，欢迎加入极客公园<code><a target="_blank" href="https://gitcafe.net/go/qun"><i class="fa fa-qq"></i> QQ群</a></code></li><li>Git主题现已支持滚动公告栏功能，兼容其他浏览器，看到的就是咯，在后台最新消息那里用li标签添加即可。</li><li>最新版Git主题已支持说说碎语功能，可像添加文章一样直接添加说说，新建说说页面即可，最后重新保存固定连接，<a target="_blank" href="https://gitcafe.net/shuo.html">演示地址</a></li><li>百度口碑求点赞啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊<a target="_blank" href="http://koubei.baidu.com/s/gitcafe.net">http://koubei.baidu.com/s/gitcafe.net</a></li><li>如果您觉得本站非常有看点，那么赶紧使用Ctrl+D 收藏极客公园吧</li>'
 		),
 		array(
 			'name'  => '友情链接页面',
@@ -448,7 +448,7 @@ $theme_options = array(
 			'desc'  => '此处输入的文字将出现在每篇文章最底部，你可以使用：{{title}}表示文章标题，{{link}}表示文章链接',
 			'id'    => 'git_copyright_b',
 			'type'  => 'textarea',
-			'std'   => '1024小神 , 版权所有丨如未注明 , 均为原创丨本网站采用<a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" rel="nofollow" target="_blank" title="BY-NC-SA授权协议">BY-NC-SA</a>协议进行授权 <br >转载请注明原文链接：<a href="{{link}}" target="_blank" title="{{title}}">{{title}}</a>'
+			'std'   => '极客公园 , 版权所有丨如未注明 , 均为原创丨本网站采用<a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" rel="nofollow" target="_blank" title="BY-NC-SA授权协议">BY-NC-SA</a>协议进行授权 <br >转载请注明原文链接：<a href="{{link}}" target="_blank" title="{{title}}">{{title}}</a>'
 		)
 	),
 
@@ -845,7 +845,7 @@ $theme_options = array(
 			'desc'  => '填写新浪微博个人主页链接',
 			'id'    => 'git_weibo',
 			'type'  => 'text',
-			'std'   => 'https://1024shen.com/go/weibo'
+			'std'   => 'https://gitcafe.net/go/weibo'
 		),
 		array(
 			'name'  => '腾讯微信',
@@ -866,7 +866,7 @@ $theme_options = array(
 			'desc'  => '直接输入QQ号即可',
 			'id'    => 'git_qqContact',
 			'type'  => 'text',
-			'std'   => '2950525265'
+			'std'   => '865113728'
 		),
 		array(
 			'name'  => 'Email',
@@ -880,14 +880,14 @@ $theme_options = array(
 			'desc'  => '',
 			'id'    => 'git_pay',
 			'type'  => 'text',
-			'std'   => '2950525265@qq.com'
+			'std'   => 'sp91@qq.com'
 		),
 		array(
 			'name'  => '支付宝二维码',
 			'desc'  => '请输入您的支付宝图片路径',
 			'id'    => 'git_pay_qr',
 			'type'  => 'text',
-			'std'   => ''
+			'std'   => 'https://p.ssl.qhimg.com/t0162cc8398cbf7dea3.jpg'
 		),
 		array(
 			'name'  => '自定义社交网络名字',
@@ -944,7 +944,7 @@ $theme_options = array(
 			'desc'  => '在这里输入第二个footer的内容',
 			'id'    => 'git_footconent2',
 			'type'  => 'textarea',
-			'std'   => '<ul><li><a href="https://1024shen.com/goto/ad" title="云左" target="_blank">云左主机</a></li><li><a href="https://1024shen.com/go/qiniu" title="七牛云" target="_blank">七牛云</a></li></ul>'
+			'std'   => '<ul><li><a href="https://gitcafe.net/goto/ad" title="云左" target="_blank">云左主机</a></li><li><a href="https://gitcafe.net/go/qiniu" title="七牛云" target="_blank">七牛云</a></li></ul>'
 		),
 		array(
 			'name'  => 'Footer3标题',
@@ -958,11 +958,11 @@ $theme_options = array(
 			'desc'  => '在这里输入第三个footer的内容',
 			'id'    => 'git_footconent3',
 			'type'  => 'textarea',
-			'std'   => '<ul><li><a href="https://1024shen.com/go/weibo" title="云落的新浪微博" target="_blank">云落的新浪微博</a></li>
+			'std'   => '<ul><li><a href="https://gitcafe.net/go/weibo" title="云落的新浪微博" target="_blank">云落的新浪微博</a></li>
 	<li><a href="http://t.qq.com/sp865113728" title="云落的腾讯微博" target="_blank">云落的腾讯微博</a></li>
 	<li><a href="http://git.oschina.net/yunluo/" title="云落的代码" target="_blank">云落的代码</a></li>
-	<li><a href="https://1024shen.com/go/baidu" title="云落的贴吧" target="_blank">云落的贴吧</a></li>
-	<li><a href="https://1024shen.com/" title="云落的网站" target="_blank">云落的网站</a></li></ul>'
+	<li><a href="https://gitcafe.net/go/baidu" title="云落的贴吧" target="_blank">云落的贴吧</a></li>
+	<li><a href="https://gitcafe.net/" title="云落的网站" target="_blank">云落的网站</a></li></ul>'
 		),
 		array(
 			'name'  => 'Footer4标题',
@@ -983,7 +983,7 @@ $theme_options = array(
 			'desc'  => '在全站页面footer部分出现，可放置网站的版权信息等等',
 			'id'    => 'git_footcode',
 			'type'  => 'textarea',
-			'std'   => 'Copyright © 2014-2015 <a href="/" title="1024小神">1024小神</a> | <a rel="nofollow" target="_blank" href="/about.html">关于网站</a> | <a rel="nofollow" target="_blank" href="/tags.html">标签汇总</a> | <a rel="nofollow" target="_blank" href="/archive.html">文章归档</a> | <a rel="nofollow" target="_blank" href="/links.html">友情链接</a> | <a href="/sitemap.html" target="_blank" title="站点地图（HTML版）">网站地图</a> | 由 <a rel="nofollow" target="_blank" href="https://1024shen.com/goto/ad">云左</a> &amp; <a rel="nofollow" target="_blank" href="https://1024shen.com/go/qiniu">七牛</a> &amp; <a href="/wp-admin">强力驱动</a>'
+			'std'   => 'Copyright © 2014-2015 <a href="/" title="极客公园">极客公园</a> | <a rel="nofollow" target="_blank" href="/about.html">关于网站</a> | <a rel="nofollow" target="_blank" href="/tags.html">标签汇总</a> | <a rel="nofollow" target="_blank" href="/archive.html">文章归档</a> | <a rel="nofollow" target="_blank" href="/links.html">友情链接</a> | <a href="/sitemap.html" target="_blank" title="站点地图（HTML版）">网站地图</a> | 由 <a rel="nofollow" target="_blank" href="https://gitcafe.net/goto/ad">云左</a> &amp; <a rel="nofollow" target="_blank" href="https://gitcafe.net/go/qiniu">七牛</a> &amp; <a href="/wp-admin">强力驱动</a>'
 		),
 		array(
 			'name'  => '全站底部脚本代码',
@@ -1369,7 +1369,7 @@ $theme_options = array(
 		),
 		array(
 			'name'  => 'CDN加速域名',
-			'desc'  => '输入本项目之前，必须开启本功能，输入您的七牛云自定义域名，必须带 <font color="#cc0000"><strong>http://</strong></font>  结尾不能带/  <a class="button-primary" target="_blank" href="https://1024shen.com/go/qiniu" title="立刻注册七牛，免费使用免备案高速CDN">注册七牛</a>，并获取链接<a rel="nofollow" href="http://71bbs.people.com.cn/postImages/89/CF/7B/F5/1509845597173.jpg" target="_blank">如图</a>',
+			'desc'  => '输入本项目之前，必须开启本功能，输入您的七牛云自定义域名，必须带 <font color="#cc0000"><strong>http://</strong></font>  结尾不能带/  <a class="button-primary" target="_blank" href="https://gitcafe.net/go/qiniu" title="立刻注册七牛，免费使用免备案高速CDN">注册七牛</a>，并获取链接<a rel="nofollow" href="http://71bbs.people.com.cn/postImages/89/CF/7B/F5/1509845597173.jpg" target="_blank">如图</a>',
 			'id'    => 'git_cdnurl_b',
 			'type'  => 'text',
 			'std'   => ''
@@ -1458,7 +1458,7 @@ $theme_options = array(
 			'desc'  => '在本输入框内输入您的微信公众号描述信息，支持html代码，字数合适就行，不能太多',
 			'id'    => 'git_mp_tips',
 			'type'  => 'textarea',
-			'std'   => '请关注1024小神官方微信公众号，关注并订阅<span style="color:#E96463;font-weight:bold;">云落1024小神</span>获取验证码。在微信里搜索<span style="color:#E96463;font-weight:bold;">云落1024小神</span>或者微信扫描二维码都可以关注1024小神官方微信公众号。'
+			'std'   => '请关注极客公园官方微信公众号，关注并订阅<span style="color:#E96463;font-weight:bold;">云落极客公园</span>获取验证码。在微信里搜索<span style="color:#E96463;font-weight:bold;">云落极客公园</span>或者微信扫描二维码都可以关注极客公园官方微信公众号。'
 		),
 		array(
 			'title' => 'HTML5 桌面推送',
@@ -1494,17 +1494,17 @@ $theme_options = array(
 		),
 		array(
 			'name'  => 'HTML5推送链接【可选】',
-			'desc'  => '当用户点击弹窗的时候说点击的链接，默认为1024小神',
+			'desc'  => '当用户点击弹窗的时候说点击的链接，默认为极客公园',
 			'id'    => 'git_notification_link',
 			'type'  => 'text',
-			'std'   => 'https://1024shen.com'
+			'std'   => 'https://gitcafe.net'
 		),
 		array(
 			'name'  => 'HTML5推送内容',
 			'desc'  => '在这里输入推送主体内容，字数合适就行，不能太多【必选】',
 			'id'    => 'git_notification_body',
 			'type'  => 'textarea',
-			'std'   => '1024小神，一个分享有趣的安卓APP和实用的WordPress技术以及Windows使用技巧的网站'
+			'std'   => '极客公园，一个分享有趣的安卓APP和实用的WordPress技术以及Windows使用技巧的网站'
 		),
 		array(
 			'title' => 'SMTP邮箱设置',

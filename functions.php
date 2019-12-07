@@ -983,7 +983,7 @@ function Bing_category(){
             $k[] = $categorie->term_id;
         }
         $cat_ids = implode(",", $k);
-        set_transient('Bing_category', $cat_ids, 60*60*24*5);//缓存5天
+        set_transient('Bing_category', $cat_ids, 5);//缓存5天
     }
     $cat_ids = explode(",", $cat_ids);
     foreach ($cat_ids as $catid) {

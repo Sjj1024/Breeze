@@ -958,11 +958,11 @@ $theme_options = array(
 			'desc'  => '在这里输入第三个footer的内容',
 			'id'    => 'git_footconent3',
 			'type'  => 'textarea',
-			'std'   => '<ul><li><a href="https://1024shen.com//go/weibo" title="云落的新浪微博" target="_blank">云落的新浪微博</a></li>
-	<li><a href="http://t.qq.com/sp865113728" title="云落的腾讯微博" target="_blank">云落的腾讯微博</a></li>
-	<li><a href="http://git.oschina.net/yunluo/" title="云落的代码" target="_blank">云落的代码</a></li>
-	<li><a href="https://1024shen.com//go/baidu" title="云落的贴吧" target="_blank">云落的贴吧</a></li>
-	<li><a href="https://1024shen.com//" title="云落的网站" target="_blank">云落的网站</a></li></ul>'
+			'std'   => '<ul><li><a href="https://1024shen.com//go/weibo" title="的新浪微博" target="_blank">的新浪微博</a></li>
+	<li><a href="http://t.qq.com/sp865113728" title="的腾讯微博" target="_blank">的腾讯微博</a></li>
+	<li><a href="http://git.oschina.net/yunluo/" title="的代码" target="_blank">的代码</a></li>
+	<li><a href="https://1024shen.com//go/baidu" title="的贴吧" target="_blank">的贴吧</a></li>
+	<li><a href="https://1024shen.com//" title="的网站" target="_blank">的网站</a></li></ul>'
 		),
 		array(
 			'name'  => 'Footer4标题',
@@ -1282,7 +1282,7 @@ $theme_options = array(
 	'高级设置' => array(
 			array(
 				'name'  => '头像来源设置',
-				'desc'  => '头像设置，云落强烈推荐选择随机头像，懒人选择',
+				'desc'  => '头像设置，强烈推荐选择随机头像，懒人选择',
 				'id'    => 'git_avater',
 				'type'  => 'radio',
 				'options' => array(
@@ -1458,7 +1458,7 @@ $theme_options = array(
 			'desc'  => '在本输入框内输入您的微信公众号描述信息，支持html代码，字数合适就行，不能太多',
 			'id'    => 'git_mp_tips',
 			'type'  => 'textarea',
-			'std'   => '请关注1024小神官方微信公众号，关注并订阅<span style="color:#E96463;font-weight:bold;">云落1024小神</span>获取验证码。在微信里搜索<span style="color:#E96463;font-weight:bold;">云落1024小神</span>或者微信扫描二维码都可以关注1024小神官方微信公众号。'
+			'std'   => '请关注1024小神官方微信公众号，关注并订阅<span style="color:#E96463;font-weight:bold;">1024小神</span>获取验证码。在微信里搜索<span style="color:#E96463;font-weight:bold;">1024小神</span>或者微信扫描二维码都可以关注1024小神官方微信公众号。'
 		),
 		array(
 			'title' => 'HTML5 桌面推送',
@@ -1546,7 +1546,7 @@ $theme_options = array(
 		),
 		array(
 			'name'  => '邮箱账号',
-			'desc'  => '请输入您的邮箱地址，比如云落的sp91@qq.com',
+			'desc'  => '请输入您的邮箱地址，比如的sp91@qq.com',
 			'id'    => 'git_mailuser_b',
 			'type'  => 'text',
 			'std'   => ''

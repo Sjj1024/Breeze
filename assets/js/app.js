@@ -22,7 +22,7 @@ jQuery(document).ready(function() {
     c = b.toLocaleString(),
     d = document.getElementById("comment") || 0,
     e = {
-        daka: function() {fancybox-skin
+        daka: function() {
             a(d, "签到成功！签到时间：" + c, "，每日打卡，生活更精彩哦~")
         },
         del: function() {

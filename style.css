@@ -4587,7 +4587,7 @@ button.btn::-moz-focus-inner,input[type=submit].btn::-moz-focus-inner {
 }
 
 .navbar .nav li li a:hover,.navbar .nav li li.current-menu-item a {
-	background-color: #576663
+	background-color: #11284d
 }
 
 .navbar .nav li.current-menu-item a,.navbar .nav li.current-menu-parent a,.navbar .nav li.current-post-ancestor a,.navbar .nav li.current_page_item a,.navbar .nav li:hover a {

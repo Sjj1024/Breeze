@@ -23,7 +23,7 @@ jQuery(document).ready(function() {
     d = document.getElementById("comment") || 0,
     e = {
         daka: function() {
-            a(d, "签到成功！签到时间：" + c, "，每日打卡，生活更精彩哦~")
+            a(d, "1024！签到时间：" + c, "，每日打卡，生活更精彩哦~")
         },
         del: function() {
             a(d, "<del>", "</del>")

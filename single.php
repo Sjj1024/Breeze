@@ -26,9 +26,6 @@ while (have_posts()):
 			<div class="meta">
 				<?php
     $category = get_the_category();
-    if ($category[0]) {
-        echo '<span id="mute-category" class="muted"><i class="fa fa-list-alt"></i><a href="' . get_category_link($category[0]->term_id) . '"> ' . $category[0]->cat_name . '</a></span>';
-    }
 ?>
 				<span class="muted"><i class="fa fa-user"></i> <a href="<?php
     echo get_author_posts_url(get_the_author_meta('ID')) ?>"><?php

@@ -17,4 +17,4 @@
 
 7、$menu[2] = array( __('总览'), 'read', 'index.php', '', 'menu-top menu-top-first menu-icon-dashboard', 'menu-dashboard', 'dashicons-dashboard' );将仪表盘改为总览
 
-8、删除说说和产品的和工具的鸡肋功能，
+8、删除说说和产品的和工具，帮助标签的鸡肋功能，

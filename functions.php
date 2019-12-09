@@ -1104,38 +1104,6 @@ if (git_get_option('git_ua_b')) {
         return $os . "  |  " . $browser;
     }
 }
-//添加碎语功能
-function git_shuoshuo() {
-    $labels = array(
-        'name' => '说说',
-        'singular_name' => '说说',
-        'add_new' => '发表说说',
-        'add_new_item' => '发表说说',
-        'edit_item' => '编辑说说',
-        'new_item' => '新说说',
-        'view_item' => '查看说说',
-        'search_items' => '搜索说说',
-        'not_found' => '暂无说说',
-        'not_found_in_trash' => '没有已遗弃的说说',
-        'menu_name' => '说说'
-    );
-    $args = array(
-        'labels' => $labels,
-        'public' => false,
-        'show_ui' => true,
-        'show_in_menu' => true,
-        'capability_type' => 'post',
-        'menu_icon' => 'dashicons-megaphone',
-        'menu_position' => 4,
-        'supports' => array(
-            'editor',
-            'title',
-            'author'
-        )
-    );
-    register_post_type('shuoshuo', $args);
-}
-add_action('init', 'git_shuoshuo');
 
 //添加产品功能
 if (!defined('UM_DIR') || !defined('WC_PLUGIN_FILE')) { /*如果安装um/Woo的话，就禁用这个功能*/

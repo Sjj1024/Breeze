@@ -239,11 +239,7 @@ function deel_smilies_src($img_src, $img, $siteurl) {
     return GIT_URL . '/assets/img/smilies/' . $img;
 }
 add_filter('smilies_src', 'deel_smilies_src', 1, 10);
-//自动勾选
-function deel_add_checkbox() {
-    echo '<label for="comment_mail_notify" class="checkbox inline" style="padding-top:0;"><input name="comment_mail_notify" id="comment_mail_notify" value="comment_mail_notify" checked="checked" type="checkbox">评论通知</label>';
-}
-add_action('comment_form', 'deel_add_checkbox');
+
 //时间显示方式‘xx以前’
 function time_ago($type = 'commennt', $day = 7) {
     $d = $type == 'post' ? 'get_post_time' : 'get_comment_time';

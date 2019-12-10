@@ -18,3 +18,9 @@
 7、$menu[2] = array( __('总览'), 'read', 'index.php', '', 'menu-top menu-top-first menu-icon-dashboard', 'menu-dashboard', 'dashicons-dashboard' );将仪表盘改为总览
 
 8、删除说说和产品的和工具，帮助标签，两个虚线框等的鸡肋功能，
+
+
+9、更改注册按钮样式
+
+
+10、注册后密码不正确

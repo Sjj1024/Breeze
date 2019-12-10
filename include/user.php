@@ -58,7 +58,7 @@ if (!defined('UM_DIR')) { /*判断是否按照UM插件*/
         }
         $new_user_id = wp_update_user($userdata);
     }
-    add_action('user_register', 'git_register_extra_fields', 100);
+    add_action('user_register', 'git_register_extra_fields');
 }
 //注册之后跳转
 if (git_get_option('git_register_redirect_ok')) {

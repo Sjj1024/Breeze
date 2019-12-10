@@ -1500,7 +1500,7 @@ class Git_Tax_Image{
 } // Git_Tax_Image
 
 $wptt_tax_image = new Git_Tax_Image();
-//WordPress函数代码结束,打算在本文件添加代码的建议参照这个方法：http://gitcafe.net/archives/4032.html
+//WordPress函数代码结束,打算在本文件添加代码的建议参照这个方法
 //用户注册成功后自动登录，并跳转到指定页面
 function auto_login_new_user( $user_id ) {
     // 用户注册后自动登录

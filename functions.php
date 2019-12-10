@@ -1510,7 +1510,7 @@ function auto_login_new_user( $user_id ) {
     wp_redirect(home_url());
     exit;
 }
-add_action( 'user_register', 'auto_login_new_user');
+add_action( 'user_register', 'auto_login_new_user',100);
 
 /* 移除WordPress后台左上角WPlog */
 function annointed_admin_bar_remove() {

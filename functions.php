@@ -44,10 +44,10 @@ function git_err($ErrMsg) {
 }
 //去除部分默认小工具
 function unregister_d_widget() {
-	unregister_widget('WP_Widget_Search');
-	unregister_widget('WP_Widget_Recent_Comments');
-	unregister_widget('WP_Widget_Tag_Cloud');
-	unregister_widget('WP_Nav_Menu_Widget');
+    unregister_widget('WP_Widget_Search');
+    unregister_widget('WP_Widget_Recent_Comments');
+    unregister_widget('WP_Widget_Tag_Cloud');
+    unregister_widget('WP_Nav_Menu_Widget');
 }
 add_action('widgets_init', 'unregister_d_widget');
 
@@ -223,10 +223,10 @@ function deel_share() {
 
 //搜索表单
 function git_searchform() {
-$search_placeholder = git_get_option('git_search_placeholder');
-?>
-<form method="get" class="searchform themeform" onsubmit="location.href='<?php echo home_url('/search/'); ?>' + encodeURIComponent(this.s.value).replace(/%20/g, '+'); return false;" action="/"><div><input type="ext" class="search" name="s" onblur="if(this.value=='')this.value='<?php echo $search_placeholder; ?>';" onfocus="if(this.value=='<?php echo $search_placeholder; ?>')this.value='';" value="<?php echo $search_placeholder; ?>"></div></form></div></div>
-<?php
+    $search_placeholder = git_get_option('git_search_placeholder');
+    ?>
+    <form method="get" class="searchform themeform" onsubmit="location.href='<?php echo home_url('/search/'); ?>' + encodeURIComponent(this.s.value).replace(/%20/g, '+'); return false;" action="/"><div><input type="ext" class="search" name="s" onblur="if(this.value=='')this.value='<?php echo $search_placeholder; ?>';" onfocus="if(this.value=='<?php echo $search_placeholder; ?>')this.value='';" value="<?php echo $search_placeholder; ?>"></div></form></div></div>
+    <?php
 }
 
 //最新发布加new 单位'小时'
@@ -397,12 +397,12 @@ function bigfa_like() {
 
 //密码可见ajax
 function pass_view(){
-	if (isset($_POST['pass']) && isset($_POST['id']) && $_POST['pass'] == git_get_option('git_mp_code') && $_POST['action'] == 'pass_view') {
-		$pass_content = get_post_meta($_POST['id'], 'pass_content', true);
-			exit($pass_content);
-		}else{
-			exit(0);
-	}
+    if (isset($_POST['pass']) && isset($_POST['id']) && $_POST['pass'] == git_get_option('git_mp_code') && $_POST['action'] == 'pass_view') {
+        $pass_content = get_post_meta($_POST['id'], 'pass_content', true);
+        exit($pass_content);
+    }else{
+        exit(0);
+    }
 
 }
 add_action( 'wp_ajax_pass_view', 'pass_view' );
@@ -442,15 +442,15 @@ add_action( 'wp_ajax_nopriv_weauth_oauth_login', 'weauth_oauth_login' );
 //付费可见
 function pay_buy(){
     if (isset($_POST['point']) && isset($_POST['userid']) &&isset($_POST['id']) && $_POST['action'] == 'pay_buy') {
-            Points::set_points( -$_POST['point'],
-                    $_POST['userid'],
-                    array(
-                        'description' => $_POST['id'],
-                        'status' => get_option( 'points-points_status', POINTS_STATUS_ACCEPTED )
-                    )
-            );//扣除金币
-			$pay_content = get_post_meta($_POST['id'], 'pay_content', true);
-            exit($pay_content);
+        Points::set_points( -$_POST['point'],
+            $_POST['userid'],
+            array(
+                'description' => $_POST['id'],
+                'status' => get_option( 'points-points_status', POINTS_STATUS_ACCEPTED )
+            )
+        );//扣除金币
+        $pay_content = get_post_meta($_POST['id'], 'pay_content', true);
+        exit($pay_content);
     }
 }
 add_action( 'wp_ajax_pay_buy', 'pay_buy' );
@@ -460,11 +460,11 @@ add_action( 'wp_ajax_nopriv_pay_buy', 'pay_buy' );
 
 //获取加密内容
 function getcontent(){
-        $id = $_POST["id"];
+    $id = $_POST["id"];
     $action = $_POST["action"];
     if ( isset($id) && $_POST['action'] == 'getcontent') {
-            $pay_content = get_post_meta($id, 'pay_content', true);
-            exit($pay_content);
+        $pay_content = get_post_meta($id, 'pay_content', true);
+        exit($pay_content);
     }
 }
 add_action( 'wp_ajax_getcontent', 'getcontent' );
@@ -472,16 +472,16 @@ add_action( 'wp_ajax_nopriv_getcontent', 'getcontent' );
 
 ///提取码检测
 function check_code(){
-	    $id = $_POST['id'];
-		$code = $_POST['code'];
+    $id = $_POST['id'];
+    $code = $_POST['code'];
     if (isset($code) && isset($id) && $_POST['action'] == 'check_code') {
-	$pay_log = get_post_meta($id, 'pay_log', true);//购买记录数据
-	$pay_arr = explode(",", $pay_log);
-	if(in_array($code,$pay_arr)){
-		exit('1');
-	}else{
-		exit('0');
-	}
+        $pay_log = get_post_meta($id, 'pay_log', true);//购买记录数据
+        $pay_arr = explode(",", $pay_log);
+        if(in_array($code,$pay_arr)){
+            exit('1');
+        }else{
+            exit('0');
+        }
     }
 
 }
@@ -490,36 +490,36 @@ add_action( 'wp_ajax_nopriv_check_code', 'check_code' );
 
 //在线充值
 function payjs_view(){
-        $id = $_POST['id'];
-        $money = $_POST['money'];
-        $way = $_POST['way'];
+    $id = $_POST['id'];
+    $money = $_POST['money'];
+    $way = $_POST['way'];
     if (isset($id) && isset($money) && isset($way) && $_POST['action'] == 'payjs_view') {
-    $config = [
-        'mchid' => git_get_option('git_payjs_id'),   // 配置商户号
-        'key'   => git_get_option('git_payjs_secret'),   // 配置通信密钥
-    ];
-    // 初始化
-    $payjs = new Payjs($config);
-    $data = [
-        'body' => '在线付费查看',   // 订单标题
-        'attach' => 'P'.$id,
-        'out_trade_no' => git_order_id(),       // 订单号
-        'total_fee' => intval($money)*100,             // 金额,单位:分
-        'notify_url' => GIT_URL.'/modules/push.php',
-        'hide' => '1'
-    ];
+        $config = [
+            'mchid' => git_get_option('git_payjs_id'),   // 配置商户号
+            'key'   => git_get_option('git_payjs_secret'),   // 配置通信密钥
+        ];
+        // 初始化
+        $payjs = new Payjs($config);
+        $data = [
+            'body' => '在线付费查看',   // 订单标题
+            'attach' => 'P'.$id,
+            'out_trade_no' => git_order_id(),       // 订单号
+            'total_fee' => intval($money)*100,             // 金额,单位:分
+            'notify_url' => GIT_URL.'/modules/push.php',
+            'hide' => '1'
+        ];
 
-    if($way == 1) $data['type'] = 'alipay';
-    $result_money = intval($money);
-    $result_trade_no = $data['out_trade_no'];
-    if(git_is_mobile()){
-        $rst = $payjs->cashier($data);//手机使用
-        $result_img = $rst;
-    }else{
-        $rst = $payjs->native($data);//电脑使用
-        $result_img = $rst['code_url'];
-    }
-    $result = $result_money.'|'. $result_img.'|'. $result_trade_no;
+        if($way == 1) $data['type'] = 'alipay';
+        $result_money = intval($money);
+        $result_trade_no = $data['out_trade_no'];
+        if(git_is_mobile()){
+            $rst = $payjs->cashier($data);//手机使用
+            $result_img = $rst;
+        }else{
+            $rst = $payjs->native($data);//电脑使用
+            $result_img = $rst['code_url'];
+        }
+        $result = $result_money.'|'. $result_img.'|'. $result_trade_no;
     }
     exit($result);
 }
@@ -527,40 +527,40 @@ add_action( 'wp_ajax_payjs_view', 'payjs_view' );
 add_action( 'wp_ajax_nopriv_payjs_view', 'payjs_view' );
 
 function checkpayjs(){
-        $id = $_POST['id'];
-        $orderid = $_POST['orderid'];
-        if (isset($id) && isset($orderid) && $_POST['action'] == 'checkpayjs') {
-            $sid = get_transient('P'.$id);
-            if(strpos($sid,'E20') !== false && $orderid == $sid){
-                exit('1');//OK
-            }else{
-                exit('0');//no
-            }
-
+    $id = $_POST['id'];
+    $orderid = $_POST['orderid'];
+    if (isset($id) && isset($orderid) && $_POST['action'] == 'checkpayjs') {
+        $sid = get_transient('P'.$id);
+        if(strpos($sid,'E20') !== false && $orderid == $sid){
+            exit('1');//OK
+        }else{
+            exit('0');//no
         }
+
+    }
 }
 add_action( 'wp_ajax_checkpayjs', 'checkpayjs' );
 add_action( 'wp_ajax_nopriv_checkpayjs', 'checkpayjs' );
 
 
 function addcode(){
-        $id = $_POST['id'];
-        $code = $_POST['code'];
-        if (isset($id) && isset($code) && $_POST['action'] == 'addcode') {
-            $pay_log = get_post_meta($id, 'pay_log', true);//购买记录数据
-            if(empty($pay_log)){
-                add_post_meta($id, 'pay_log', $code, true);
-            }else{
-                update_post_meta($id, 'pay_log', $pay_log.','.$code);
-            }
-            $pay_log = get_post_meta($id, 'pay_log', true);//购买记录数据
-            $pay_arr = explode(",", $pay_log);
-                if(in_array($code,$pay_arr)){
-                    exit('1');//OK
-                }else{
-                    exit('0');//NO
-                }
+    $id = $_POST['id'];
+    $code = $_POST['code'];
+    if (isset($id) && isset($code) && $_POST['action'] == 'addcode') {
+        $pay_log = get_post_meta($id, 'pay_log', true);//购买记录数据
+        if(empty($pay_log)){
+            add_post_meta($id, 'pay_log', $code, true);
+        }else{
+            update_post_meta($id, 'pay_log', $pay_log.','.$code);
         }
+        $pay_log = get_post_meta($id, 'pay_log', true);//购买记录数据
+        $pay_arr = explode(",", $pay_log);
+        if(in_array($code,$pay_arr)){
+            exit('1');//OK
+        }else{
+            exit('0');//NO
+        }
+    }
 }
 add_action( 'wp_ajax_addcode', 'addcode' );
 add_action( 'wp_ajax_nopriv_addcode', 'addcode' );
@@ -570,42 +570,42 @@ add_action( 'wp_ajax_nopriv_addcode', 'addcode' );
 //在线充值
 function pay_chongzhi(){
     if (isset($_POST['jine']) && $_POST['action'] == 'pay_chongzhi') {
-    $config = [
-        'mchid' => git_get_option('git_payjs_id'),   // 配置商户号
-        'key'   => git_get_option('git_payjs_secret'),   // 配置通信密钥
-    ];
-    // 初始化
-    $payjs = new Payjs($config);
-    $data = [
-        'body' => '积分充值',   // 订单标题
-        'attach' => get_current_user_id(),   // 订单备注
-        'out_trade_no' => git_order_id(),       // 订单号
-        'total_fee' => intval($_POST['jine'])*100,             // 金额,单位:分
-        'notify_url' => GIT_URL.'/modules/push.php',
-        'hide' => '1'
-    ];
+        $config = [
+            'mchid' => git_get_option('git_payjs_id'),   // 配置商户号
+            'key'   => git_get_option('git_payjs_secret'),   // 配置通信密钥
+        ];
+        // 初始化
+        $payjs = new Payjs($config);
+        $data = [
+            'body' => '积分充值',   // 订单标题
+            'attach' => get_current_user_id(),   // 订单备注
+            'out_trade_no' => git_order_id(),       // 订单号
+            'total_fee' => intval($_POST['jine'])*100,             // 金额,单位:分
+            'notify_url' => GIT_URL.'/modules/push.php',
+            'hide' => '1'
+        ];
 
 
-    $result_money = intval($_POST['jine']);
+        $result_money = intval($_POST['jine']);
 
-    $result_trade_no = $data['out_trade_no'];
+        $result_trade_no = $data['out_trade_no'];
 
-    if( git_get_option('git_payjs_alipay') && $_POST['way'] =='alipay' ){
-        $data['type'] = 'alipay';
-        $result_way = '支付宝';
-    }else{
-        $result_way = '微信';
-    }
+        if( git_get_option('git_payjs_alipay') && $_POST['way'] =='alipay' ){
+            $data['type'] = 'alipay';
+            $result_way = '支付宝';
+        }else{
+            $result_way = '微信';
+        }
 
-    if(git_is_mobile()){
-        $rst = $payjs->cashier($data);//手机使用
-        $result_img = $rst;
-    }else{
-        $rst = $payjs->native($data);//电脑使用
-        $result_img = $rst['code_url'];
-    }
-    $result = $result_money.'|'.$result_way.'|'. $result_img.'|'. $result_trade_no;
-    exit($result);
+        if(git_is_mobile()){
+            $rst = $payjs->cashier($data);//手机使用
+            $result_img = $rst;
+        }else{
+            $rst = $payjs->native($data);//电脑使用
+            $result_img = $rst['code_url'];
+        }
+        $result = $result_money.'|'.$result_way.'|'. $result_img.'|'. $result_trade_no;
+        exit($result);
     }
 }
 add_action( 'wp_ajax_pay_chongzhi', 'pay_chongzhi' );
@@ -670,16 +670,16 @@ function hot_posts_list() {
             $postid = $topten->ID;
             $title = $topten->post_title;
             $commentcount = $topten->comment_count;
-                $output.= '<li><p><span class="post-comments">评论 (' . $commentcount . ')</span><span class="muted"><a href="javascript:;" data-action="ding" data-id="' . $postid . '" id="Addlike" class="action';
-                if (isset($_COOKIE['bigfa_ding_' . $postid])) $output.= ' actived';
-                $output.= '"><i class="fa fa-heart-o"></i><span class="count">';
-                if (get_post_meta($postid, 'bigfa_ding', true)) {
-                    $output.= get_post_meta($postid, 'bigfa_ding', true);
-                } else {
-                    $output.= '0';
-                }
-                $output.= '</span>赞</a></span></p><span class="label label-' . $i . '">' . $i . '</span><a href="' . get_permalink($postid) . '" title="' . $title . '">' . $title . '</a></li>';
-                $i++;
+            $output.= '<li><p><span class="post-comments">评论 (' . $commentcount . ')</span><span class="muted"><a href="javascript:;" data-action="ding" data-id="' . $postid . '" id="Addlike" class="action';
+            if (isset($_COOKIE['bigfa_ding_' . $postid])) $output.= ' actived';
+            $output.= '"><i class="fa fa-heart-o"></i><span class="count">';
+            if (get_post_meta($postid, 'bigfa_ding', true)) {
+                $output.= get_post_meta($postid, 'bigfa_ding', true);
+            } else {
+                $output.= '0';
+            }
+            $output.= '</span>赞</a></span></p><span class="label label-' . $i . '">' . $i . '</span><a href="' . get_permalink($postid) . '" title="' . $title . '">' . $title . '</a></li>';
+            $i++;
         }
     }
     echo $output;
@@ -700,7 +700,7 @@ function git_is_mobile() {
     if (empty($_SERVER['HTTP_USER_AGENT'])) {
         return false;
     } elseif ((strpos($_SERVER['HTTP_USER_AGENT'], 'Mobile') !== false && strpos($_SERVER['HTTP_USER_AGENT'], 'iPad') === false) // many mobile devices (all iPh, etc.)
-     || strpos($_SERVER['HTTP_USER_AGENT'], 'Android') !== false || strpos($_SERVER['HTTP_USER_AGENT'], 'NetType/') !== false || strpos($_SERVER['HTTP_USER_AGENT'], 'Kindle') !== false || strpos($_SERVER['HTTP_USER_AGENT'], 'MQQBrowser') !== false || strpos($_SERVER['HTTP_USER_AGENT'], 'Opera Mini') !== false || strpos($_SERVER['HTTP_USER_AGENT'], 'Opera Mobi') !== false || strpos($_SERVER['HTTP_USER_AGENT'], 'HUAWEI') !== false || strpos($_SERVER['HTTP_USER_AGENT'], 'TBS/') !== false || strpos($_SERVER['HTTP_USER_AGENT'], 'Mi') !== false || strpos($_SERVER['HTTP_USER_AGENT'], 'iPhone') !== false) {
+        || strpos($_SERVER['HTTP_USER_AGENT'], 'Android') !== false || strpos($_SERVER['HTTP_USER_AGENT'], 'NetType/') !== false || strpos($_SERVER['HTTP_USER_AGENT'], 'Kindle') !== false || strpos($_SERVER['HTTP_USER_AGENT'], 'MQQBrowser') !== false || strpos($_SERVER['HTTP_USER_AGENT'], 'Opera Mini') !== false || strpos($_SERVER['HTTP_USER_AGENT'], 'Opera Mobi') !== false || strpos($_SERVER['HTTP_USER_AGENT'], 'HUAWEI') !== false || strpos($_SERVER['HTTP_USER_AGENT'], 'TBS/') !== false || strpos($_SERVER['HTTP_USER_AGENT'], 'Mi') !== false || strpos($_SERVER['HTTP_USER_AGENT'], 'iPhone') !== false) {
         return true;
     } else {
         return false;
@@ -830,52 +830,52 @@ function zfunc_smiley_button($custom = false, $before = '', $after = '') {
     if ($custom == true) $smiley_url = site_url() . '/wp-includes/images/smilies';
     else $customsmiley_url = GIT_URL . '/assets/img/smilies';
     echo $before;
-?>
-		<a href="javascript:grin(':?:')"><img src="<?php
-    echo $customsmiley_url; ?>/icon_question.gif" alt="" /></a>
-		<a href="javascript:grin(':razz:')"><img src="<?php
-    echo $customsmiley_url; ?>/icon_razz.gif" alt="" /></a>
-		<a href="javascript:grin(':sad:')"><img src="<?php
-    echo $customsmiley_url; ?>/icon_sad.gif" alt="" /></a>
-		<a href="javascript:grin(':evil:')"><img src="<?php
-    echo $customsmiley_url; ?>/icon_evil.gif" alt="" /></a>
-		<a href="javascript:grin(':!:')"><img src="<?php
-    echo $customsmiley_url; ?>/icon_exclaim.gif" alt="" /></a>
-		<a href="javascript:grin(':smile:')"><img src="<?php
-    echo $customsmiley_url; ?>/icon_smile.gif" alt="" /></a>
-		<a href="javascript:grin(':oops:')"><img src="<?php
-    echo $customsmiley_url; ?>/icon_redface.gif" alt="" /></a>
-		<a href="javascript:grin(':grin:')"><img src="<?php
-    echo $customsmiley_url; ?>/icon_biggrin.gif" alt="" /></a>
-		<a href="javascript:grin(':eek:')"><img src="<?php
-    echo $customsmiley_url; ?>/icon_surprised.gif" alt="" /></a>
-		<a href="javascript:grin(':shock:')"><img src="<?php
-    echo $customsmiley_url; ?>/icon_eek.gif" alt="" /></a>
-		<a href="javascript:grin(':???:')"><img src="<?php
-    echo $customsmiley_url; ?>/icon_confused.gif" alt="" /></a>
-		<a href="javascript:grin(':cool:')"><img src="<?php
-    echo $customsmiley_url; ?>/icon_cool.gif" alt="" /></a>
-		<a href="javascript:grin(':lol:')"><img src="<?php
-    echo $customsmiley_url; ?>/icon_lol.gif" alt="" /></a>
-		<a href="javascript:grin(':mad:')"><img src="<?php
-    echo $customsmiley_url; ?>/icon_mad.gif" alt="" /></a>
-		<a href="javascript:grin(':twisted:')"><img src="<?php
-    echo $customsmiley_url; ?>/icon_twisted.gif" alt="" /></a>
-		<a href="javascript:grin(':roll:')"><img src="<?php
-    echo $customsmiley_url; ?>/icon_rolleyes.gif" alt="" /></a>
-		<a href="javascript:grin(':wink:')"><img src="<?php
-    echo $customsmiley_url; ?>/icon_wink.gif" alt="" /></a>
-		<a href="javascript:grin(':idea:')"><img src="<?php
-    echo $customsmiley_url; ?>/icon_idea.gif" alt="" /></a>
-		<a href="javascript:grin(':arrow:')"><img src="<?php
-    echo $customsmiley_url; ?>/icon_arrow.gif" alt="" /></a>
-		<a href="javascript:grin(':neutral:')"><img src="<?php
-    echo $customsmiley_url; ?>/icon_neutral.gif" alt="" /></a>
-		<a href="javascript:grin(':cry:')"><img src="<?php
-    echo $customsmiley_url; ?>/icon_cry.gif" alt="" /></a>
-		<a href="javascript:grin(':mrgreen:')"><img src="<?php
-    echo $customsmiley_url; ?>/icon_mrgreen.gif" alt="" /></a>
-<?php
+    ?>
+    <a href="javascript:grin(':?:')"><img src="<?php
+        echo $customsmiley_url; ?>/icon_question.gif" alt="" /></a>
+    <a href="javascript:grin(':razz:')"><img src="<?php
+        echo $customsmiley_url; ?>/icon_razz.gif" alt="" /></a>
+    <a href="javascript:grin(':sad:')"><img src="<?php
+        echo $customsmiley_url; ?>/icon_sad.gif" alt="" /></a>
+    <a href="javascript:grin(':evil:')"><img src="<?php
+        echo $customsmiley_url; ?>/icon_evil.gif" alt="" /></a>
+    <a href="javascript:grin(':!:')"><img src="<?php
+        echo $customsmiley_url; ?>/icon_exclaim.gif" alt="" /></a>
+    <a href="javascript:grin(':smile:')"><img src="<?php
+        echo $customsmiley_url; ?>/icon_smile.gif" alt="" /></a>
+    <a href="javascript:grin(':oops:')"><img src="<?php
+        echo $customsmiley_url; ?>/icon_redface.gif" alt="" /></a>
+    <a href="javascript:grin(':grin:')"><img src="<?php
+        echo $customsmiley_url; ?>/icon_biggrin.gif" alt="" /></a>
+    <a href="javascript:grin(':eek:')"><img src="<?php
+        echo $customsmiley_url; ?>/icon_surprised.gif" alt="" /></a>
+    <a href="javascript:grin(':shock:')"><img src="<?php
+        echo $customsmiley_url; ?>/icon_eek.gif" alt="" /></a>
+    <a href="javascript:grin(':???:')"><img src="<?php
+        echo $customsmiley_url; ?>/icon_confused.gif" alt="" /></a>
+    <a href="javascript:grin(':cool:')"><img src="<?php
+        echo $customsmiley_url; ?>/icon_cool.gif" alt="" /></a>
+    <a href="javascript:grin(':lol:')"><img src="<?php
+        echo $customsmiley_url; ?>/icon_lol.gif" alt="" /></a>
+    <a href="javascript:grin(':mad:')"><img src="<?php
+        echo $customsmiley_url; ?>/icon_mad.gif" alt="" /></a>
+    <a href="javascript:grin(':twisted:')"><img src="<?php
+        echo $customsmiley_url; ?>/icon_twisted.gif" alt="" /></a>
+    <a href="javascript:grin(':roll:')"><img src="<?php
+        echo $customsmiley_url; ?>/icon_rolleyes.gif" alt="" /></a>
+    <a href="javascript:grin(':wink:')"><img src="<?php
+        echo $customsmiley_url; ?>/icon_wink.gif" alt="" /></a>
+    <a href="javascript:grin(':idea:')"><img src="<?php
+        echo $customsmiley_url; ?>/icon_idea.gif" alt="" /></a>
+    <a href="javascript:grin(':arrow:')"><img src="<?php
+        echo $customsmiley_url; ?>/icon_arrow.gif" alt="" /></a>
+    <a href="javascript:grin(':neutral:')"><img src="<?php
+        echo $customsmiley_url; ?>/icon_neutral.gif" alt="" /></a>
+    <a href="javascript:grin(':cry:')"><img src="<?php
+        echo $customsmiley_url; ?>/icon_cry.gif" alt="" /></a>
+    <a href="javascript:grin(':mrgreen:')"><img src="<?php
+        echo $customsmiley_url; ?>/icon_mrgreen.gif" alt="" /></a>
+    <?php
     echo $after;
 }
 //Ajax_data_zfunc_smiley_button
@@ -982,6 +982,7 @@ function Bing_category(){
         set_transient('Bing_category', $cat_ids, 5);//缓存5天
     }
     $cat_ids = explode(",", $cat_ids);
+    sort($cat_ids);
     foreach ($cat_ids as $catid) {
         $cat_name = get_cat_name($catid);
         $output = '<span>' . $cat_name . "=(<b>" . $catid . '</b>)</span>&nbsp;&nbsp;';
@@ -1137,7 +1138,7 @@ if (git_get_option('git_compress')) {
             $buffer_out .= "\n<!--压缩前的大小: {$initial} bytes; 压缩后的大小: {$final} bytes; 节约：{$savings}% -->";
             return $buffer_out;
         }
-            ob_start("wp_compress_html_main");
+        ob_start("wp_compress_html_main");
     }
     add_action('get_header', 'wp_compress_html');
     function git_unCompress($content)
@@ -1163,9 +1164,9 @@ if (git_get_option('git_vip')):
     function get_author_class($comment_author_email, $user_id) {
         $author_count = get_transient('author_count');
         if(false === $author_count){
-        global $wpdb;
-        $author_count = count($wpdb->get_results("SELECT comment_ID as author_count FROM $wpdb->comments WHERE comment_author_email = '$comment_author_email' "));
-        set_transient('author_count', $author_count, 60*60*2);//缓存2小时
+            global $wpdb;
+            $author_count = count($wpdb->get_results("SELECT comment_ID as author_count FROM $wpdb->comments WHERE comment_author_email = '$comment_author_email' "));
+            set_transient('author_count', $author_count, 60*60*2);//缓存2小时
         }
         if ($author_count >= 1 && $author_count < git_get_option('git_vip1')) echo '<a class="vip1" title="评论达人 LV.1"></a>';
         else if ($author_count >= git_get_option('git_vip1') && $author_count < git_get_option('git_vip2')) echo '<a class="vip2" title="评论达人 LV.2"></a>';
@@ -1235,7 +1236,7 @@ if (git_get_option('git_admin')) {
     function git_login_protection()
     {
         if ($_GET[''.git_get_option('git_admin_q').''] !== git_get_option('git_admin_a')) {
-             wp_die('您的访问密码错误，请使用加密链接登录，如果不明白怎么回事，请直接到主题function文件搜索【救命】');
+            wp_die('您的访问密码错误，请使用加密链接登录，如果不明白怎么回事，请直接到主题function文件搜索【救命】');
         }
     }
     add_action('login_enqueue_scripts', 'git_login_protection');
@@ -1244,14 +1245,14 @@ if (git_get_option('git_admin')) {
 
 //获取云落的远程通知，加入缓存，1天一次
 function get_Yunluo_Notice(){
-	$Yunluo_Notice = get_transient('Yunluo_Notice');
-	if(false === $Yunluo_Notice){
+    $Yunluo_Notice = get_transient('Yunluo_Notice');
+    if(false === $Yunluo_Notice){
         $Yunluo_Notice = wp_remote_get('https://u.gitcafe.net/api/notice.txt')['body'];
-		if ( is_array( $Yunluo_Notice ) && !is_wp_error($Yunluo_Notice) && $Yunluo_Notice['response']['code'] == '200' ) {
-			set_transient('Yunluo_Notice', $Yunluo_Notice, 60*60*12);//缓存12小时
-		}else{
-			set_transient('Yunluo_Notice', '有点小尴尬哈啊，服务器菌暂时有点累了呢，先休息一会儿~，', 60*60*2);//缓存2小时
-		}
+        if ( is_array( $Yunluo_Notice ) && !is_wp_error($Yunluo_Notice) && $Yunluo_Notice['response']['code'] == '200' ) {
+            set_transient('Yunluo_Notice', $Yunluo_Notice, 60*60*12);//缓存12小时
+        }else{
+            set_transient('Yunluo_Notice', '有点小尴尬哈啊，服务器菌暂时有点累了呢，先休息一会儿~，', 60*60*2);//缓存2小时
+        }
     }
     return $Yunluo_Notice;
 }
@@ -1266,14 +1267,14 @@ function git_page_id( $pagephp ) {
 
 //根据订单描述金币数据，d=订单号 u=用户id
 function git_check( $d , $u = null) {
-	global $wpdb;
-	$des = " WHERE `description` = '" . $d . "'";
-	$userid = "";
-	if ( isset( $u ) && ( $u !== null ) ) {
-		$userid = " AND `user_id` = '" . $u . "'";
-	}
-	$result = $wpdb->query("SELECT `point_id` FROM " . Points_Database::points_get_table("users") . $des . $userid . " AND `status` = 'accepted' LIMIT 3", ARRAY_A);
-	return $result;//0=无订单结果，1=有订单结果，>1均为异常数据
+    global $wpdb;
+    $des = " WHERE `description` = '" . $d . "'";
+    $userid = "";
+    if ( isset( $u ) && ( $u !== null ) ) {
+        $userid = " AND `user_id` = '" . $u . "'";
+    }
+    $result = $wpdb->query("SELECT `point_id` FROM " . Points_Database::points_get_table("users") . $des . $userid . " AND `status` = 'accepted' LIMIT 3", ARRAY_A);
+    return $result;//0=无订单结果，1=有订单结果，>1均为异常数据
 }
 
 // 内链图片src
@@ -1314,32 +1315,32 @@ if (git_get_option('git_article_list')) {
 
 //评论地址更换
 function git_comment_author( $query_vars ) {
-	if ( array_key_exists( 'author_name', $query_vars ) ) {
-		global $wpdb;
-		$author_id = $wpdb->get_var( $wpdb->prepare( "SELECT user_id FROM {$wpdb->usermeta} WHERE meta_key='first_name' AND meta_value = %s", $query_vars['author_name'] ) );
-		if ( $author_id ) {
-			$query_vars['author'] = $author_id;
-			unset( $query_vars['author_name'] );
-		}
-	}
-	return $query_vars;
+    if ( array_key_exists( 'author_name', $query_vars ) ) {
+        global $wpdb;
+        $author_id = $wpdb->get_var( $wpdb->prepare( "SELECT user_id FROM {$wpdb->usermeta} WHERE meta_key='first_name' AND meta_value = %s", $query_vars['author_name'] ) );
+        if ( $author_id ) {
+            $query_vars['author'] = $author_id;
+            unset( $query_vars['author_name'] );
+        }
+    }
+    return $query_vars;
 }
 add_filter( 'request', 'git_comment_author' );
 
 function git_comment_author_link( $link, $author_id, $author_nicename ) {
-	$my_name = get_user_meta( $author_id, 'first_name', true );
-	if ( $my_name ) {
-		$link = str_replace( $author_nicename, $my_name, $link );
-	}
-	return $link;
+    $my_name = get_user_meta( $author_id, 'first_name', true );
+    if ( $my_name ) {
+        $link = str_replace( $author_nicename, $my_name, $link );
+    }
+    return $link;
 }
 add_filter( 'author_link', 'git_comment_author_link', 10, 3 );
 
 //生成订单号编码
 function git_order_id(){
-	date_default_timezone_set('Asia/Shanghai');
-	$order_id = 'E' . date("YmdHis") . mt_rand(10000, 99999);
-	return $order_id;
+    date_default_timezone_set('Asia/Shanghai');
+    $order_id = 'E' . date("YmdHis") . mt_rand(10000, 99999);
+    return $order_id;
 }
 
 //默认头像
@@ -1379,59 +1380,59 @@ add_filter('posts_search', 'git_search_by_title', 10, 2);
 //HTML5 桌面通知
 function Notification_js() {
     if (git_get_option('git_notification_days') && git_get_option('git_notification_title') && git_get_option('git_notification_body') && git_get_option('git_notification_icon') && git_get_option('git_notification_cookie')) {
-?>
-    <script type="text/javascript">
-    if (window.Notification) {
-	function setCookie(name, value) {
-		var exp = new Date();
-		exp.setTime(exp.getTime() + <?php echo git_get_option('git_notification_days'); ?> * 24 * 60 * 60 * 1000);
-		document.cookie = name + "=" + escape(value) + ";expires=" + exp.toGMTString() + ";path=/";
-	}
-	function getCookie(name) {
-		var arr = document.cookie.match(new RegExp("(^| )" + name + "=([^;]*)(;|$)"));
-		if (arr != null) return unescape(arr[2]);
-		return null
-	}
-	var popNotice = function() {
-			if (Notification.permission == "granted") {
-                setTimeout(function() {
-                var n = new Notification("<?php
-        echo git_get_option('git_notification_title'); ?>", {
-                    body: "<?php
-        echo git_get_option('git_notification_body'); ?>",
-                    icon: "<?php
-        echo git_get_option('git_notification_icon'); ?>"
-                });
-				n.onclick = function() {
-					window.location.href="<?php
-        echo git_get_option('git_notification_link'); ?>";
-					n.close()
-				};
-				n.onclose = function() {
-					setCookie("git_Notification", "<?php
-        echo git_get_option('git_notification_cookie'); ?>")
-				}
-                }, 2 * 1000)
-			}
-		};
-	if (getCookie("git_Notification") == "<?php
-        echo git_get_option('git_notification_cookie'); ?>") {
-		console.log("您已关闭桌面弹窗提醒，有效期为<?php
-        echo git_get_option('git_notification_days'); ?>天！")
-	} else {
-		if (Notification.permission == "granted") {
-			popNotice()
-		} else if (Notification.permission != "denied") {
-			Notification.requestPermission(function(permission) {
-				popNotice()
-			})
-		}
-	}
-} else {
-	console.log("您的浏览器不支持Web Notification")
-}
-</script>
-    <?php
+        ?>
+        <script type="text/javascript">
+            if (window.Notification) {
+                function setCookie(name, value) {
+                    var exp = new Date();
+                    exp.setTime(exp.getTime() + <?php echo git_get_option('git_notification_days'); ?> * 24 * 60 * 60 * 1000);
+                    document.cookie = name + "=" + escape(value) + ";expires=" + exp.toGMTString() + ";path=/";
+                }
+                function getCookie(name) {
+                    var arr = document.cookie.match(new RegExp("(^| )" + name + "=([^;]*)(;|$)"));
+                    if (arr != null) return unescape(arr[2]);
+                    return null
+                }
+                var popNotice = function() {
+                    if (Notification.permission == "granted") {
+                        setTimeout(function() {
+                            var n = new Notification("<?php
+                                echo git_get_option('git_notification_title'); ?>", {
+                                body: "<?php
+                                    echo git_get_option('git_notification_body'); ?>",
+                                icon: "<?php
+                                    echo git_get_option('git_notification_icon'); ?>"
+                            });
+                            n.onclick = function() {
+                                window.location.href="<?php
+                                    echo git_get_option('git_notification_link'); ?>";
+                                n.close()
+                            };
+                            n.onclose = function() {
+                                setCookie("git_Notification", "<?php
+                                    echo git_get_option('git_notification_cookie'); ?>")
+                            }
+                        }, 2 * 1000)
+                    }
+                };
+                if (getCookie("git_Notification") == "<?php
+                    echo git_get_option('git_notification_cookie'); ?>") {
+                    console.log("您已关闭桌面弹窗提醒，有效期为<?php
+                        echo git_get_option('git_notification_days'); ?>天！")
+                } else {
+                    if (Notification.permission == "granted") {
+                        popNotice()
+                    } else if (Notification.permission != "denied") {
+                        Notification.requestPermission(function(permission) {
+                            popNotice()
+                        })
+                    }
+                }
+            } else {
+                console.log("您的浏览器不支持Web Notification")
+            }
+        </script>
+        <?php
     }
 }
 add_action('get_footer', 'Notification_js');
@@ -1439,13 +1440,13 @@ add_action('get_footer', 'Notification_js');
 //标签增加另外选项
 class Git_Tax_Image{
     function __construct(){
-		add_action( 'post_tag_add_form_fields', array( $this, 'add_tax_image_field' ) );
-		add_action( 'post_tag_edit_form_fields', array( $this, 'edit_tax_image_field' ) );
-		add_action( 'edited_post_tag', array( $this, 'save_tax_meta' ), 10, 2 );
-		add_action( 'create_post_tag', array( $this, 'save_tax_meta' ), 10, 2 );
+        add_action( 'post_tag_add_form_fields', array( $this, 'add_tax_image_field' ) );
+        add_action( 'post_tag_edit_form_fields', array( $this, 'edit_tax_image_field' ) );
+        add_action( 'edited_post_tag', array( $this, 'save_tax_meta' ), 10, 2 );
+        add_action( 'create_post_tag', array( $this, 'save_tax_meta' ), 10, 2 );
     } // __construct
     public function add_tax_image_field(){
-    ?>
+        ?>
         <div class="form-field">
             <label for="term_meta[tax_image]">标签封面</label>
             <input type="text" name="term_meta[tax_image]" id="term_meta[tax_image]" value="" />
@@ -1457,7 +1458,7 @@ class Git_Tax_Image{
             <p class="description">输入标签标题</p>
         </div>
 
-    <?php
+        <?php
     } // add_tax_image_field
     public function edit_tax_image_field( $term ){
         $term_id = $term->term_id;
@@ -1465,26 +1466,26 @@ class Git_Tax_Image{
         $image = $term_meta['tax_image'] ? $term_meta['tax_image'] : '';
         $keywords = $term_meta['tax_title'] ? $term_meta['tax_title'] : '';
 
-    ?>
+        ?>
         <tr class="form-field">
             <th scope="row">
                 <label for="term_meta[tax_image]">标签封面</label>
-                <td>
-                    <input type="text" name="term_meta[tax_image]" id="term_meta[tax_image]" value="<?php echo esc_url( $image ); ?>" />
-                    <p class="description">输入标签封面图片URL</p>
-                </td>
+            <td>
+                <input type="text" name="term_meta[tax_image]" id="term_meta[tax_image]" value="<?php echo esc_url( $image ); ?>" />
+                <p class="description">输入标签封面图片URL</p>
+            </td>
             </th>
         </tr><!-- /.form-field -->
         <tr class="form-field">
             <th scope="row">
                 <label for="term_meta[tax_title]">标签标题</label>
-                <td>
-                    <input type="text" name="term_meta[tax_title]" id="term_meta[tax_title]" value="<?php echo $keywords; ?>" />
-                    <p class="description">输入标签标题</p>
-                </td>
+            <td>
+                <input type="text" name="term_meta[tax_title]" id="term_meta[tax_title]" value="<?php echo $keywords; ?>" />
+                <p class="description">输入标签标题</p>
+            </td>
             </th>
         </tr>
-    <?php
+        <?php
     } // edit_tax_image_field
     public function save_tax_meta( $term_id ){
 
@@ -1500,37 +1501,43 @@ class Git_Tax_Image{
 } // Git_Tax_Image
 
 $wptt_tax_image = new Git_Tax_Image();
-//WordPress函数代码结束,打算在本文件添加代码的建议参照这个方法
-//用户注册成功后自动登录，并跳转到指定页面
+//WordPress函数代码结束,打算在本文件添加代码的建议参照这个方法：http://gitcafe.net/archives/4032.html
+// 注册成功后跳转到指定页面
 function auto_login_new_user( $user_id ) {
     // 用户注册后自动登录
     wp_set_current_user($user_id);
     wp_set_auth_cookie($user_id);
-    // 这里跳转到首页，请根据自己的需要修改
+    // 这里跳转到域名+指定页面，请根据自己的需要修改
     wp_redirect(home_url());
     exit;
 }
 add_action( 'user_register', 'auto_login_new_user',100);
+// 登录成功重定向
+function login_redirect( $redirect_to, $request, $user ){
+    return home_url();
+}
+add_filter( 'login_redirect', 'login_redirect', 10, 3 );
 
 /* 移除WordPress后台左上角WPlog */
 function annointed_admin_bar_remove() {
-global $wp_admin_bar;
-/* Remove their stuff */
-$wp_admin_bar->remove_menu('wp-logo');
+    global $wp_admin_bar;
+    /* Remove their stuff */
+    $wp_admin_bar->remove_menu('wp-logo');
 }
 add_action('wp_before_admin_bar_render', 'annointed_admin_bar_remove', 0);
- 
+
 /* 移除WordPress后台底部右文字 */
 add_filter('update_footer', '_admin_footer_right_text', 11);
 function _admin_footer_right_text($text) {
-	$text = '';
-	return $text;
+    $text = '';
+    return $text;
 }
 /* 移除WordPress后台底部左文字 */
 add_filter('admin_footer_text', '_admin_footer_left_text');
 function _admin_footer_left_text($text) {
-	$text = '';
-	return $text;
+    $text = '';
+    return $text;
 }
+
 
 ?>

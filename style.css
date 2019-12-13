@@ -3105,7 +3105,7 @@ a.text-warning:focus,a.text-warning:hover {
 }
 
 .text-error {
-	color: #d9534f
+	color: #2196f3
 }
 
 a.text-error:focus,a.text-error:hover {
@@ -3938,7 +3938,7 @@ input[type=button].btn-block,input[type=reset].btn-block,input[type=submit].btn-
 }
 
 .btn-danger {
-	background-color: #d9534f;
+	background-color: #2196f3;
 	color: #fff
 }
 
@@ -4521,6 +4521,7 @@ button.btn::-moz-focus-inner,input[type=submit].btn::-moz-focus-inner {
 	float: left;
 	display: block;
 	width: auto;
+	margin-right: 1px;
 	min-width: 75px
 }
 
@@ -5305,11 +5306,11 @@ a.badge:focus,a.badge:hover,a.label:focus,a.label:hover {
 }
 
 .badge-important,.label-important {
-	background-color: #d9534f
+	background-color: #2196f3
 }
 
 .badge-important .label-arrow,.label-important .label-arrow {
-	border-left-color: #d9534f
+	border-left-color: #2196f3
 }
 
 .badge-warning,.label-warning {
@@ -5470,8 +5471,8 @@ a.badge-inverse:hover .label-arrow,a.label-inverse:hover .label-arrow {
 }
 
 .banner-your:active {
-	border-color: #d9534f;
-	color: #d9534f
+	border-color: #2196f3;
+	color: #2196f3
 }
 
 .title {
@@ -5639,12 +5640,12 @@ a.badge-inverse:hover .label-arrow,a.label-inverse:hover .label-arrow {
 }
 
 .comm:hover {
-	background-color: #d9534f;
+	background-color: #2196f3;
 	color: #fff
 }
 
 .comm:hover i {
-	border-color: #d9534f transparent
+	border-color: #2196f3 transparent
 }
 
 .banner-excerpt {
@@ -5719,7 +5720,7 @@ a.badge-inverse:hover .label-arrow,a.label-inverse:hover .label-arrow {
 }
 
 .base-tit b {
-	color: #d9534f
+	color: #2196f3
 }
 
 .queryinfo {
@@ -5979,15 +5980,15 @@ a.badge-inverse:hover .label-arrow,a.label-inverse:hover .label-arrow {
 }
 
 .article-tags a:nth-child(5n+2) {
-	background-color: #5cb85c
+	background-color: #578fce
 }
 
 .article-tags a:nth-child(5n+3) {
-	background-color: #d9534f
+	background-color: #ff7043
 }
 
 .article-tags a:nth-child(5n+4) {
-	background-color: #f0ad4e
+	background-color: #ffa726
 }
 
 .tag-clouds {
@@ -6524,11 +6525,11 @@ a.badge-inverse:hover .label-arrow,a.label-inverse:hover .label-arrow {
 }
 
 .git_textbanner a.style02,.git_textbanner a.style02 h2 {
-	color: #d9534f
+	color: #2196f3
 }
 
 .git_textbanner a.style02:hover {
-	border-color: #d9534f;
+	border-color: #2196f3;
 	color: #d33632
 }
 
@@ -6611,7 +6612,7 @@ a.badge-inverse:hover .label-arrow,a.label-inverse:hover .label-arrow {
 	width: inherit;
 	width: 84%;
 	height: 38.4px;
-	background: none repeat scroll 0 0 #d9534f;
+	background: none repeat scroll 0 0 #2196f3;
 	color: #FFF;
 	vertical-align: middle;
 	text-align: center;
@@ -6691,7 +6692,7 @@ a.badge-inverse:hover .label-arrow,a.label-inverse:hover .label-arrow {
 }
 
 .git_tags a:nth-child(9n+3) {
-	background-color: #d9534f
+	background-color: #2196f3
 }
 
 .git_tags a:nth-child(9n+4) {
@@ -6744,7 +6745,7 @@ a.badge-inverse:hover .label-arrow,a.label-inverse:hover .label-arrow {
 }
 
 .git_postlist li a:hover {
-	color: #d9534f
+	color: #2196f3
 }
 
 .git_postlist .text {
@@ -6890,7 +6891,7 @@ a.badge-inverse:hover .label-arrow,a.label-inverse:hover .label-arrow {
 }
 
 .comment-reply-link:hover {
-	color: #d9534f
+	color: #2196f3
 }
 
 .children .comment {
@@ -7102,7 +7103,7 @@ a.badge-inverse:hover .label-arrow,a.label-inverse:hover .label-arrow {
 }
 
 .comt-error {
-	color: #d9534f
+	color: #2196f3
 }
 
 #loading {
@@ -7205,7 +7206,7 @@ a.badge-inverse:hover .label-arrow,a.label-inverse:hover .label-arrow {
 }
 
 .related_posts a:hover {
-	color: #03a9f4
+	color: #1890ff
 }
 
 .related_img {

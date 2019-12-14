@@ -29,7 +29,7 @@ add_shortcode('dm', 'DemoUrl');
 //使用短代码添加回复后可见内容开始
 function reply_to_read($atts, $content = null) {
     extract(shortcode_atts(array(
-        "notice" => '<blockquote><center><p class="reply-to-read" style="color: blue;">注意：本段内容须成功“<a href="' . get_permalink() . '#respond" title="回复本文">回复本文</a>”后“<a href="javascript:window.location.reload();" title="刷新本页">刷新本页</a>”方可查看！</p></center></blockquote>'
+        "notice" => '<blockquote><center><p class="reply-to-read" style="color: #f44336;">注意：本段内容须成功“<a href="' . get_permalink() . '#respond" title="回复本文">回复本文</a>”后“<a href="javascript:window.location.reload();" title="刷新本页">刷新本页</a>”方可查看！</p></center></blockquote>'
     ) , $atts));
     $email = null;
     $user_ID = get_current_user_id();
@@ -197,7 +197,7 @@ add_shortcode('netmusic', 'music163');
 function login_to_read($atts, $content = null) {
     $logina = '<a target="_blank" href="' . esc_url(wp_login_url(get_permalink())) . '">登录</a>';
     extract(shortcode_atts(array(
-        "notice" => '<blockquote><center><p class="reply-to-read" style="color: blue;">注意：本段内容须“' . $logina . '”后方可查看！</p></center></blockquote>'
+        "notice" => '<blockquote><center><p class="reply-to-read" style="color: #f44336;">注意：本段内容须“' . $logina . '”后方可查看！</p></center></blockquote>'
     ) , $atts));
     if (is_user_logged_in() && !is_null($content) && !is_feed()) {
         return '<div id="e-secret"><fieldset><legend>隐藏的内容</legend>

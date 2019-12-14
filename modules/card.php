@@ -58,7 +58,7 @@ if (is_home()) { ?>
             echo deel_strimwidth(strip_tags(apply_filters('the_excerpt', strip_shortcodes($post->post_excerpt))) , 0, git_get_option('git_excerpt_length') ? git_get_option('git_excerpt_length') : 100 , '……');
         } ?></p>
 				<div class="cardpricebtn"><i class="fa fa-calendar"></i> <?php
-        the_time('m-d'); ?><a class="cardbuy" href="<?php
+                    the_modified_time('m-d'); ?><a class="cardbuy" href="<?php
         the_permalink(); ?>"><i class="fa fa-eye"></i> 立刻查看</a></div>
 			</div>
 		</div>

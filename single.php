@@ -36,7 +36,7 @@ while (have_posts()):
     if ( $zhuanzai ) echo '<span class="muted"><i class="fa fa-info-circle"></i> 来源：<a rel="nofollow" target="_blank" href="' . get_post_meta($post->ID, 'git_zhuanzai_link', true) . '">' .get_post_meta($post->ID, 'git_zhuanzai_name', true) . '</a></span>'; ?>
 
 				<span class="muted"><i class="fa fa-clock-o"></i> <?php
-    echo timeago(get_gmt_from_date(get_the_time('Y-m-d G:i:s'))) ?></span>
+    echo timeago(get_gmt_from_date(the_modified_time('Y-m-d G:i:s'))) ?></span>
 				<span class="muted"><i class="fa fa-eye"></i> <?php
     deel_views('次浏览'); ?></span>
 				<?php

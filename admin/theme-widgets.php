@@ -297,7 +297,7 @@ function githeme_posts_list($orderby, $limit, $cat, $img) {
             }
         } ?><span class="text"><?php
         the_title(); ?></span><span class="muted"><?php
-        the_time('Y-m-d'); ?></span><span class="muted"><?php
+        the_modified_time('Y-m-d'); ?></span><span class="muted"><?php
         comments_number('0', '1评论', '%评论'); ?></span></a>
 </li>
 <?php
@@ -1031,14 +1031,6 @@ class git_tongji extends WP_Widget {
             $output.= ' 个</li>';
             $output.= '<li>分类总数：';
             $output.= $count_categories;
-            $output.= ' 个</li>';
-            $output.= '<li>友链总数：';
-            $output.= $link;
-            $output.= ' 个</li>';
-        }
-        if (get_option("users_can_register") == 1) {
-            $output.= '<li>用户总数：';
-            $output.= $users;
             $output.= ' 个</li>';
         }
         $output.= '<li>最后更新：';

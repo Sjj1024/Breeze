@@ -13,7 +13,7 @@ class git_banner extends WP_Widget {
             'classname' => 'git_banner',
             'description' => '显示一个广告(包括富媒体)'
         );
-        parent::__construct('git_banner', 'Git-广告', $widget_ops);
+        parent::__construct('git_banner', 'Breeze-广告', $widget_ops);
     }
     function widget($args, $instance) {
         extract($args);
@@ -57,7 +57,7 @@ class git_comment extends WP_Widget {
             'classname' => 'git_comment',
             'description' => '显示网友最新评论（头像+名称+评论）'
         );
-        parent::__construct('git_comment', 'Git-最新评论', $widget_ops);
+        parent::__construct('git_comment', 'Breeze-最新评论', $widget_ops);
     }
     function widget($args, $instance) {
         extract($args);
@@ -160,7 +160,7 @@ class git_postlist extends WP_Widget {
             'classname' => 'git_postlist',
             'description' => '图文展示（最新文章+热门文章+随机文章）'
         );
-        parent::__construct('git_postlist', 'Git-聚合文章', $widget_ops);
+        parent::__construct('git_postlist', 'Breeze-聚合文章', $widget_ops);
     }
     function widget($args, $instance) {
         extract($args);
@@ -315,7 +315,7 @@ class git_reader extends WP_Widget {
             'classname' => 'git_reader',
             'description' => '显示近期评论频繁的网友头像等'
         );
-        parent::__construct('git_reader', 'Git-活跃读者', $widget_ops);
+        parent::__construct('git_reader', 'Breeze-活跃读者', $widget_ops);
     }
     function widget($args, $instance) {
         extract($args);
@@ -436,7 +436,7 @@ class git_rec extends WP_Widget {
             'classname' => 'git_rec',
             'description' => '五个推荐块'
         );
-        parent::__construct('git_rec', 'Git-推荐模块', $widget_ops);
+        parent::__construct('git_rec', 'Breeze-推荐模块', $widget_ops);
     }
     function widget($args, $instance) {
         extract($args);
@@ -521,7 +521,7 @@ class git_slick extends WP_Widget {
             'classname' => 'git_slick',
             'description' => '带箭头的小幻灯片'
         );
-        parent::__construct('git_slick', 'Git-幻灯片(风格二)', $widget_ops);
+        parent::__construct('git_slick', 'Breeze-幻灯片(风格二)', $widget_ops);
     }
     function widget($args, $instance) {
         extract($args);
@@ -596,7 +596,7 @@ class git_slide extends WP_Widget {
             'classname' => 'git_slide',
             'description' => '无箭头小幻灯片'
         );
-        parent::__construct('git_slide', 'Git-幻灯片(风格一)', $widget_ops);
+        parent::__construct('git_slide', 'Breeze-幻灯片(风格一)', $widget_ops);
     }
     function widget($args, $instance) {
         extract($args);
@@ -670,7 +670,7 @@ class git_social extends WP_Widget {
             'classname' => 'git_social',
             'description' => '在这里显示国内常用的社交网站按钮'
         );
-        parent::__construct('git_social', 'Git-社交按钮', $widget_ops);
+        parent::__construct('git_social', 'Breeze-社交按钮', $widget_ops);
     }
     function widget($args, $instance) {
         extract($args);
@@ -704,7 +704,7 @@ class git_subscribe extends WP_Widget {
             'classname' => 'git_subscribe',
             'description' => '显示邮箱订阅组件'
         );
-        parent::__construct('git_subscribe', 'Git-邮箱订阅', $widget_ops);
+        parent::__construct('git_subscribe', 'Breeze-邮箱订阅', $widget_ops);
     }
     function widget($args, $instance) {
         extract($args);
@@ -776,7 +776,7 @@ class git_tag extends WP_Widget {
             'classname' => 'git_tag',
             'description' => '显示热门标签'
         );
-        parent::__construct('git_tag', 'Git-标签云', $widget_ops);
+        parent::__construct('git_tag', 'Breeze-标签云', $widget_ops);
     }
     function widget($args, $instance) {
         extract($args);
@@ -862,7 +862,7 @@ class git_textbanner extends WP_Widget {
             'classname' => 'git_textbanner',
             'description' => '显示一个文本特别推荐'
         );
-        parent::__construct('git_textbanner', 'Git-特别推荐', $widget_ops);
+        parent::__construct('git_textbanner', 'Breeze-特别推荐', $widget_ops);
     }
     function widget($args, $instance) {
         extract($args);
@@ -961,7 +961,7 @@ class git_tongji extends WP_Widget {
             'classname' => 'git_tongji',
             'description' => '显示网站的统计信息'
         );
-        parent::__construct(false, 'Git-网站统计', $widget_ops);
+        parent::__construct(false, 'Breeze-网站统计', $widget_ops);
     }
     function form($instance) {
         $instance = wp_parse_args((array)$instance, array(

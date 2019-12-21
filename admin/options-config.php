@@ -834,14 +834,14 @@ $theme_options = array(
 			'type'  => 'title'
 		),
 		array(
-			'name'  => 'RSS订阅地址',
+			'name'  => 'Google地址:',
 			'desc'  => '如果您想使用自定义的RSS地址，请在这里输入您期望的地址。',
 			'id'    => 'git_rss',
 			'type'  => 'text',
 			'std'   => get_bloginfo('rss2_url')
 		),
 		array(
-			'name'  => '新浪微博',
+			'name'  => 'YouTube视频',
 			'desc'  => '填写新浪微博个人主页链接',
 			'id'    => 'git_weibo',
 			'type'  => 'text',

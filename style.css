@@ -3540,10 +3540,6 @@ a:focus,a:hover {
 	width: 100%
 }
 
-.container {
-	margin-bottom: 10px
-}
-
 .content-wrap {
 	float: left;
 	width: 100%
@@ -4492,6 +4488,15 @@ button.btn::-moz-focus-inner,input[type=submit].btn::-moz-focus-inner {
 	position: relative;
 	background: #2196f3;
 	background-image: linear-gradient(120deg, #03A9F4, #155799);
+	animation:color-change-5x 10s linear .2s infinite alternate both
+}
+
+@keyframes color-change-5x{
+	0%{background: #2fadf6}
+	25%{background:#0277bd}
+	50%{background:#3f51b5}
+	75%{background: #7c44b0}
+	100%{background: #ef66b6}
 }
 
 .container-inner {
@@ -4642,7 +4647,7 @@ button.btn::-moz-focus-inner,input[type=submit].btn::-moz-focus-inner {
 
 .g-logo h1 {
 	display: inline-block;
-	padding: 40px 0 20px 0;
+	padding: 15px 0 10px 0;
 	margin: 0;
 	font-weight: 100;
 	font-family: Handlee,"华文行楷","Microsoft Yahei",arial,sans-serif;
@@ -6020,7 +6025,7 @@ a.badge-inverse:hover .label-arrow,a.label-inverse:hover .label-arrow {
 .article-content blockquote {
 	margin: 15px auto;
 	padding: 5px 15px 10px;
-	border: 1px solid #d6e9c6;
+	border: 1px solid #2196f3;
 	background-color: #fafcf9;
 	font-size: .875rem;
 	border-left-width: 3px
@@ -7715,9 +7720,6 @@ a.badge-inverse:hover .label-arrow,a.label-inverse:hover .label-arrow {
 
 .footer {
 	position: relative;
-	-webkit-box-shadow: 0 -5px 0 rgba(0,0,0,.1);
-	-moz-box-shadow: 0 -8px 0 rgba(0,0,0,.1);
-	box-shadow: 0 -8px 0 rgba(0,0,0,.1)
 }
 
 .social {
@@ -7793,7 +7795,7 @@ a.badge-inverse:hover .label-arrow,a.label-inverse:hover .label-arrow {
 }
 
 .social .rss {
-	background: #ff7c49
+	background: #0d47a1
 }
 
 .social a {
@@ -7885,7 +7887,7 @@ a.badge-inverse:hover .label-arrow,a.label-inverse:hover .label-arrow {
 	padding: 4px 12px 3px;
 	border: 1px solid #f6ebeb;
 	border-radius: 2px;
-	background-color: #2196f3;
+	background-color: #03a9f4;
 	color: #fff;
 	text-indent: 0
 }
@@ -7898,7 +7900,7 @@ a.badge-inverse:hover .label-arrow,a.label-inverse:hover .label-arrow {
 }
 
 .fenye a:hover span {
-	background-color: #fd9790;
+	background-color: #03a9f4;
 	color: #fff
 }/*! 短代码文本框样式 */#sc_notice {
 					overflow: hidden;
@@ -9396,7 +9398,7 @@ input {
 }
 
 .h1logo {
-	margin: 40px 0 20px 0
+	margin: 15px 0 10px 0
 }
 
 .ab-author {

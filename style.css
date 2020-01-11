@@ -6728,6 +6728,7 @@ a.badge-inverse:hover .label-arrow,a.label-inverse:hover .label-arrow {
 	color: #fff;
 	line-height: 1.3125rem;
 	opacity: .7;
+	border-radius: 5px;
 	filter: alpha(opacity=80)
 }
 

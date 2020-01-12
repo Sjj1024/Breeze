@@ -4729,7 +4729,7 @@ button.btn::-moz-focus-inner,input[type=submit].btn::-moz-focus-inner {
 }
 
 .search-expand .themeform input {
-	width: 87%;
+	width: 86%;
 	outline: 0;
 	border: 0
 }

@@ -3016,6 +3016,7 @@ img {
 	height: auto;
 	max-width: 100%;
 	border: 0;
+	border-radius: 5px;
 	vertical-align: middle;
 	-ms-interpolation-mode: bicubic
 }
@@ -9790,6 +9791,7 @@ input {
 	text-align: center;
 	text-overflow: ellipsis;
 	white-space: nowrap;
+	border-radius: 5px;
 	font-family: Microsoft YaHei
 }
 
